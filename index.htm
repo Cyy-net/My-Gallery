@@ -1,191 +1,100 @@
-html {
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("bg1.jpeg") no-repeat fixed center/cover;
-    color: white;
-}
+    <nav class="top-nav">
+        <a href="#home" class="nav-item">HOME</a>
+        <a href="#gallery-view" class="nav-item">GALLERY</a>
+        <a href="#about" class="nav-item">ABOUT</a>
+    </nav>
 
-.top-nav {
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 40px;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    top: 0;
-    z-index: 1001;
-    box-sizing: border-box;
-}
+    <div class="side-nav">
+        <div class="side-header">Navigation Menu</div>
+        <a href="#photos">Photos Section</a>
+        <a href="#videos">Videos Section</a>
+        <a href="#" class="special-link">Support & FAQ</a>
+    </div>
 
-.nav-item {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 18px 25px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    <div class="container" id="gallery-view">
+        <h1 class="main-title">My Gallery</h1>
+        
+        <h2 id="photos" class="section-title">Photos</h2>
+        <div class="row">
+            <div class="box">
+                <figure>
+                    <img src="pic1.jpg" alt="pic1">
+                    <figcaption>Glicerene Cruz</figcaption>
+                </figure>
+            </div>
+            <div class="box">
+                <figure>
+                    <img src="pic3.jpeg" alt="pic3">
+                    <figcaption>Alwina Alfabete</figcaption>
+                </figure>
+            </div>
+            <div class="box">
+                <figure>
+                    <img src="pic2.jpeg" alt="pic2">
+                    <figcaption>John Reynalyn Aquino</figcaption>
+                </figure> 
+            </div>
+        </div>
 
-.nav-item:hover { color: #f0f8ff; }
+   <h2 id="videos" class="section-title">Videos</h2>
+<div class="row">
+    <div class="box">
+        <figure>
+            <video controls preload="metadata">
+                <source src="vid1.mp4" type="video/mp4">
+            </video>
+            <figcaption>Glicerene's vlog</figcaption>
+        </figure>
+    </div>
 
-.side-nav {
-    width: 220px;
-    height: 100%;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 1000;
-    padding: 30px 0px;
-    border-right: 2px solid #444;
-    box-shadow: 4px 0px 10px rgba(0,0,0,0.5);
-}
+    <div class="box">
+        <figure>
+            <video controls preload="metadata">
+                <source src="vid2.mp4" type="video/mp4">
+            </video>
+            <figcaption>Alwina's vlog</figcaption>
+        </figure>
+    </div>
 
-.side-header {
-    color: #888;
-    font-size: 12px;
-    padding: 0 20px 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+    <div class="box">
+        <figure>
+            <video controls preload="metadata">
+                <source src="vid3.mp4" type="video/mp4">
+            </video>
+            <figcaption>John Reynalyn's vlog</figcaption>
+        </figure>
+    </div>
+</div>
+        
+    <div id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">About Us</h2>
+            <div class="group-card">
+                <h3>My Group</h3>
+                <div class="name-list">
+                    <p>Cruz, Glicerene</p>
+                    <p>Alfabete, Alwina Nicole</p>
+                    <p>Aquino, Johnrey</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-.side-nav a {
-    color: #bbb;
-    text-decoration: none;
-    display: block;
-    transition: 0.4s;
-    padding: 15px 20px;
-    margin: 5px 10px;
-    border-radius: 5px;
-}
-
-.side-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #f0f8ff;
-    padding-left: 30px;
-}
-
-.side-nav a:active {
-    background-color: #f0f8ff;
-    color: #000;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 100px auto 100px 260px; 
-    text-align: center;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.box {
-    width: 31%;
-    background-color: #ffffff;
-    padding: 8px 8px 12px 8px; 
-    border: 1px solid #000000;
-    border-radius: 7px;
-    box-shadow: 8px 8px 15px rgba(0,0,0,0.3);
-    box-sizing: border-box;
-    color: #333;
-}
-
-.box img, .box video {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.main-title {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 64px;
-    color: #ffffff;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-    margin: 20px 0 40px 0;
-    letter-spacing: 2px;
-}
-
-.section-title {
-    color: #f0f8ff;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    margin-bottom: 25px;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.about-section {
-    margin-left: 220px; 
-    padding: 100px 0;
-    min-height: 50vh;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.about-container {
-    text-align: center;
-    width: 80%;
-}
-
-.group-card {
-    display: inline-block;
-    border: 3px solid #f0f8ff;
-    padding: 40px 60px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-.group-card h3 {
-    margin-top: 0;
-    font-size: 28px;
-    color: #f0f8ff;
-    text-transform: uppercase;
-    border-bottom: 1px solid #f0f8ff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.name-list p {
-    font-size: 20px;
-    margin: 10px 0;
-    letter-spacing: 1px;
-    color: white;
-}
-
-.main-footer {
-    margin-left: 220px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #888;
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 1px solid #444;
-}
-
-.footer-content p {
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-.footer-links a {
-    color: #f0f8ff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-#home:target .container {
-    display: none;
-}
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 My Gallery Project. Website Development.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#gallery-view">Gallery</a> | 
+                <a href="#about">About</a>
+            </div>
+        </div>
