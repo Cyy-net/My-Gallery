@@ -7,11 +7,11 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("bg1.jpeg") no-repeat fixed center/cover;
     color: white;
-    display: flex; /* Helps align sidebar and content */
+    display: flex;
 }
 
 .section-title {
-    font-family: 'Segoe UI Bold', sans-serif; /* Change this to your preferred font name */
+    font-family: 'Segoe UI Bold', sans-serif;
     font-size: 32px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -24,8 +24,6 @@ body {
     padding-bottom: 10px;
 }
 
-
-/* --- TOP NAV (Always stays at top) --- */
 .top-nav {
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
@@ -48,7 +46,6 @@ body {
     font-size: 14px;
 }
 
-/* --- SIDE NAV (Fixed on Desktop) --- */
 .side-nav {
     width: 220px;
     height: 100vh;
@@ -82,10 +79,9 @@ body {
     color: white;
 }
 
-/* --- MAIN CONTENT WRAPPER --- */
 .main-content {
-    margin-left: 220px; /* This creates the gap for the sidebar */
-    margin-top: 60px;  /* This creates the gap for the top nav */
+    margin-left: 220px; 
+    margin-top: 60px; 
     width: calc(100% - 220px);
     min-height: 100vh;
 }
@@ -95,7 +91,6 @@ body {
     text-align: center;
 }
 
-/* --- GALLERY GRID --- */
 .row {
     display: flex;
     flex-wrap: wrap; 
@@ -120,7 +115,6 @@ body {
     border-radius: 4px;
 }
 
-/* --- ABOUT SECTION (Centered & No Stretch) --- */
 .about-section {
     padding: 100px 20px;
     background: rgba(0,0,0,0.5);
@@ -138,7 +132,6 @@ body {
     text-align: center;
 }
 
-/* --- FOOTER --- */
 .main-footer {
     background: #000;
     padding: 40px 20px;
@@ -146,19 +139,18 @@ body {
     border-top: 1px solid #333;
 }
 
-/* --- CELLPHONE FIXES --- */
 @media (max-width: 768px) {
     .side-nav {
-        display: none; /* Removes sidebar on mobile */
+        display: none; 
     }
 
     .main-content {
-        margin-left: 0; /* Content takes full width */
+        margin-left: 0; 
         width: 100%;
     }
 
     .top-nav {
-        justify-content: center; /* Center the top links */
+        justify-content: center;
         padding-right: 0;
     }
 
